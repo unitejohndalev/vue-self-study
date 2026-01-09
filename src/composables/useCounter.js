@@ -8,11 +8,21 @@ export const useCounter = () => {
         // count.value > 0 && count.value--
         if (count.value > 0) count.value--
     }
+    const toggleVisible = () => {
+        isVisible.value = !isVisible.value
+    }
+    const isVisible =ref(true)
+    const show = () => {isVisible.value = true}
+    const hide = () => {isVisible.value = false}
 
     return {
         count,
         increment,
-        decrement
+        decrement,
+        isVisible,
+        toggleVisible,
+        show,
+        hide
     }
 
 }

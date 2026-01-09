@@ -8,7 +8,13 @@ import { useCounter } from './composables/useCounter'
 const counter = reactive({count:0})
 const message = ref("Hello World!")
 
-const {count, increment, decrement} = useCounter()
+const {count,
+       increment,
+       decrement,
+       isVisible,
+       toggleVisible,
+       show,
+       hide} = useCounter()
 
 </script>
 
@@ -24,10 +30,14 @@ const {count, increment, decrement} = useCounter()
   <main>
     <TheWelcome />
   </main> -->
-  <h1>{{message }}</h1>
-  <p>{{count}}</p>
-  <button @click="increment">Increment</button>
-  <button @click="decrement">Decrement</button>
+  <div v-if="isVisible">
+    <h1>{{message }}</h1>
+    <p>{{count}}</p>
+    <button @click="increment">Increment</button>
+    <button @click="decrement">Decrement</button>
+  </div>
+  <button @click="toggleVisible">{{ isVisible ? "Hide" : "Show" }}</button>
+
 </template>
 
 <style scoped>
