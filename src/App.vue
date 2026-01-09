@@ -1,12 +1,12 @@
-<script setup>
+<script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 
 import {reactive, ref} from 'vue'
 import { useCounter } from './composables/useCounter'
+import Message from './components/Message.vue'
+import { messages } from './constants/messages'
 
-const counter = reactive({count:0})
-const message = ref("Hello World!")
 
 const {count,
        increment,
@@ -31,7 +31,7 @@ const {count,
     <TheWelcome />
   </main> -->
   <div v-if="isVisible">
-    <h1>{{message }}</h1>
+    <Message :message="messages.welcome"/>
     <p>{{count}}</p>
     <button @click="increment">Increment</button>
     <button @click="decrement">Decrement</button>
