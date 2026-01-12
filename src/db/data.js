@@ -1,0 +1,22 @@
+export const books = [
+  { title: "To Kill a Mockingbird" },
+  { title: "1984" },
+  { title: "The Great Gatsby" },
+  { title: "Pride and Prejudice" },
+  { title: "The Catcher in the Rye" },
+  { title: "Moby-Dick" },
+  { title: "War and Peace" },
+  { title: "The Lord of the Rings" },
+  { title: "The Hobbit" },
+  { title: "Crime and Punishment" },
+  { title: "Brave New World" },
+  { title: "Jane Eyre" },
+  { title: "Wuthering Heights" },
+  { title: "The Alchemist" },
+  { title: "The Chronicles of Narnia" },
+  { title: "Animal Farm" },
+  { title: "Fahrenheit 451" },
+  { title: "The Picture of Dorian Gray" },
+  { title: "Les Misérables" },
+  { title: "The Kite Runner" }
+];

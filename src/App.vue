@@ -3,18 +3,11 @@ import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 
 import {reactive, ref} from 'vue'
-import { useCounter } from './composables/useCounter'
 import Message from './components/Message.vue'
 import { messages } from './constants/messages'
+import DecrementIncrement from './components/DecrementIncrement.vue'
+import HideAndShowElement from './components/HideAndShowElement.vue'
 
-
-const {count,
-       increment,
-       decrement,
-       isVisible,
-       toggleVisible,
-       show,
-       hide} = useCounter()
 
 </script>
 
@@ -30,14 +23,11 @@ const {count,
   <main>
     <TheWelcome />
   </main> -->
-  <div v-if="isVisible">
+  <div>
     <Message :message="messages.welcome"/>
-    <p>{{count}}</p>
-    <button @click="increment">Increment</button>
-    <button @click="decrement">Decrement</button>
+    <DecrementIncrement />
+    <HideAndShowElement/>
   </div>
-  <button @click="toggleVisible">{{ isVisible ? "Hide" : "Show" }}</button>
-
 </template>
 
 <style scoped>
