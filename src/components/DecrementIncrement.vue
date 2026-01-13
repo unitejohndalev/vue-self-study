@@ -16,7 +16,7 @@ const {
 <template>
     <div>
         <p>{{ count }}</p>
-        <button @click ="increment">Increment</button>
         <button @click="decrement">Decrement</button>
+        <button @click ="increment">Increment</button>
     </div>
 </template>

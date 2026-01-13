@@ -7,6 +7,7 @@ import Message from './components/Message.vue'
 import { messages } from './constants/messages'
 import DecrementIncrement from './components/DecrementIncrement.vue'
 import HideAndShowElement from './components/HideAndShowElement.vue'
+import FormsAndInputs from './components/FormsAndInputs.vue'
 
 
 </script>
@@ -25,9 +26,17 @@ import HideAndShowElement from './components/HideAndShowElement.vue'
   </main> -->
   <div>
     <Message :message="messages.welcome"/>
-    <DecrementIncrement />
-    <HideAndShowElement/>
+    <!-- <DecrementIncrement />
+    <HideAndShowElement/> -->
+    <!-- <FormsAndInputs/> -->
   </div>
+  <nav>
+    <ul>
+      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/about">About</router-link></li>
+    </ul>
+  </nav>
+  <router-view/>
 </template>
 
 <style scoped>
@@ -57,4 +66,6 @@ import HideAndShowElement from './components/HideAndShowElement.vue'
     flex-wrap: wrap;
   }
 } */
+
+ 
 </style>
